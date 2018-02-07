@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Transact\Transact;
+use PHPUnit\Framework\TestCase;
 
-class SlimCDTests extends PHPUnit_Framework_TestCase
+class SlimCDTests extends TestCase
 {
     public function testingGuzzle()
     {

@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Transact\Transact;
+use PHPUnit\Framework\TestCase;
 
-class TransactTest extends PHPUnit_Framework_TestCase
+class TransactTest extends TestCase
 {
     public function testInstantiateTransactClass()
     {

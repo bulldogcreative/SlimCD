@@ -7,12 +7,12 @@ use GuzzleHttp\Client;
 /**
  * Class SlimCD
  * @package SlimCD
- * @version 1.1.1
+ * @version 2.0.0
  * @author Levi Durfee <ldurfee@bulldogcreative.com>
  */
 abstract class SlimCD implements Interfaces\SlimCD
 {
-    private $version = '1.2.0';
+    private $version = '2.0.0';
 
     /**
      * @var string
@@ -46,6 +46,12 @@ abstract class SlimCD implements Interfaces\SlimCD
      * @var int
      */
     protected $defaultTimeout = 600;
+
+    /**
+     * Curl Verify Peer
+     * @var bool
+     */
+    protected $verifyPeer = true;
 
     /**
      * @param $url
@@ -82,13 +88,13 @@ abstract class SlimCD implements Interfaces\SlimCD
         curl_setopt($ch, CURLOPT_POST, 1);
         $this->send = http_build_query($nameValueArray) ;
         curl_setopt($ch, CURLOPT_POSTFIELDS, $this->send);
-        if (version_compare(PHP_VERSION, '7.0.0') >= 0) {
-            // Turn on TLS 1.2
-            curl_setopt ($ch, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+        // Turn on TLS 1.2
+        curl_setopt ($ch, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+
+        if($this->verifyPeer) {
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         }
-        // SLIMCD.COM uses a GODADDY SSL certificate.  Once you install the CA for GoDaddy SSL, please
-        // remove the line below.
-        // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
         // receive server response ...
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
@@ -167,5 +173,10 @@ abstract class SlimCD implements Interfaces\SlimCD
     public function getVersion()
     {
         return $this->version;
+    }
+
+    public function setVerifyPeer($verifyPeer)
+    {
+        $this->verifyPeer = $verifyPeer;
     }
 }

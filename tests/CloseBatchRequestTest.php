@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Transact\CloseBatchRequest;
+use PHPUnit\Framework\TestCase;
 
-class CloseBatchRequestTest extends PHPUnit_Framework_TestCase
+class CloseBatchRequestTest extends TestCase
 {
     public function testCloseBatch()
     {

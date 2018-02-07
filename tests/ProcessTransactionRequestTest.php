@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Transact\ProcessTransactionRequest;
+use PHPUnit\Framework\TestCase;
 
-class ProcessTransactionRequestTest extends PHPUnit_Framework_TestCase
+class ProcessTransactionRequestTest extends TestCase
 {
     public function testProcessTransactionInstantiate()
     {
