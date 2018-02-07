@@ -12,7 +12,7 @@ use GuzzleHttp\Client;
  */
 abstract class SlimCD implements Interfaces\SlimCD
 {
-    private $version = '1.1.1';
+    private $version = '1.2.0';
 
     /**
      * @var string
@@ -82,9 +82,11 @@ abstract class SlimCD implements Interfaces\SlimCD
         curl_setopt($ch, CURLOPT_POST, 1);
         $this->send = http_build_query($nameValueArray) ;
         curl_setopt($ch, CURLOPT_POSTFIELDS, $this->send);
+        // Turn on TLS 1.2
+        curl_setopt ($ch, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
         // SLIMCD.COM uses a GODADDY SSL certificate.  Once you install the CA for GoDaddy SSL, please
         // remove the line below.
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         // receive server response ...
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);

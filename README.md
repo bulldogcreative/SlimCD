@@ -17,15 +17,15 @@ composer require bulldog-creative/slimcd
 ```json
 {
     "require": {
-        "bulldog-creative/slimcd": "1.1.*"
+        "bulldog-creative/slimcd": "1.2.*"
     }
 }
 ```
 
 ### Download it directly
 
-* [v1.1.0 zip](https://github.com/BulldogCreative/SlimCD/archive/v1.1.0.zip)
-* [v1.1.0 tar.gz](https://github.com/BulldogCreative/SlimCD/archive/v1.1.0.tar.gz)
+* [v1.2.0 zip](https://github.com/BulldogCreative/SlimCD/archive/v1.2.0.zip)
+* [v1.2.0 tar.gz](https://github.com/BulldogCreative/SlimCD/archive/v1.2.0.tar.gz)
 
 ## Examples
 
