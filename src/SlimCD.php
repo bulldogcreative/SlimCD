@@ -48,6 +48,12 @@ abstract class SlimCD implements Interfaces\SlimCD
     protected $defaultTimeout = 600;
 
     /**
+     * Curl Verify Peer
+     * @var bool
+     */
+    protected $verifyPeer = false;
+
+    /**
      * @param $url
      * @param $errorMessage
      * @return object
@@ -86,7 +92,11 @@ abstract class SlimCD implements Interfaces\SlimCD
         curl_setopt ($ch, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
         // SLIMCD.COM uses a GODADDY SSL certificate.  Once you install the CA for GoDaddy SSL, please
         // remove the line below.
-        // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+        if($this->verifyPeer) {
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        }
+
         // receive server response ...
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
@@ -165,5 +175,10 @@ abstract class SlimCD implements Interfaces\SlimCD
     public function getVersion()
     {
         return $this->version;
+    }
+
+    public function setVerifyPeer($verifyPeer)
+    {
+        $this->verifyPeer = $verifyPeer;
     }
 }
