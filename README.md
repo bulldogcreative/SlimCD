@@ -17,7 +17,7 @@ composer require bulldog-creative/slimcd
 ```json
 {
     "require": {
-        "bulldog-creative/slimcd": "1.3.*"
+        "bulldog-creative/slimcd": "2.0.*"
     }
 }
 ```
