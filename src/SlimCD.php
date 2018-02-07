@@ -51,7 +51,7 @@ abstract class SlimCD implements Interfaces\SlimCD
      * Curl Verify Peer
      * @var bool
      */
-    protected $verifyPeer = false;
+    protected $verifyPeer = true;
 
     /**
      * @param $url
