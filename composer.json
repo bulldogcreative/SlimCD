@@ -19,7 +19,7 @@
     "wappr/logger": "^1.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "5.0.*"
+    "phpunit/phpunit": "^5"
   },
   "autoload": {
     "psr-4": {
