@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Login\Login;
+use PHPUnit\Framework\TestCase;
 
-class LoginTest extends PHPUnit_Framework_TestCase
+class LoginTest extends TestCase
 {
     public function testInstantiateLoginClass()
     {

@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Sessions\Sessions;
+use PHPUnit\Framework\TestCase;
 
-class SessionsTest extends PHPUnit_Framework_TestCase
+class SessionsTest extends TestCase
 {
     public function testInstantiateSessionsClass()
     {

@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Images\Images;
+use PHPUnit\Framework\TestCase;
 
-class ImagesTest extends PHPUnit_Framework_TestCase
+class ImagesTest extends TestCase
 {
     public function testFake()
     {

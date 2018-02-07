@@ -1,8 +1,9 @@
 <?php
 
 use SlimCD\Reports\Reports;
+use PHPUnit\Framework\TestCase;
 
-class ReportsTest extends PHPUnit_Framework_TestCase
+class ReportsTest extends TestCase
 {
     public function testInstantiateReportsClass()
     {
