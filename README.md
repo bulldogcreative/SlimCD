@@ -2,7 +2,7 @@
 
 For use with [SlimCD](https://stats.slimcd.com/) payment gateway.
 
-[![Build Status](https://travis-ci.org/BulldogCreative/SlimCD.svg?branch=master)](https://travis-ci.org/BulldogCreative/SlimCD)
+[![Build Status](https://travis-ci.org/bulldogcreative/SlimCD.svg?branch=v2.0.0)](https://travis-ci.org/bulldogcreative/SlimCD)
 
 ## Installation
 
