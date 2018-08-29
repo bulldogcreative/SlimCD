@@ -7,8 +7,6 @@ use \SlimCD\jsonSerializeTrait;
 /**
  * Class DownloadSignatureRequest
  *
- * Download a signature from the database.
- *
  * Downloads the vector signature data that was stored for a specific gateid.
  * The data is returned as vector-encoded hex bytes.
  *

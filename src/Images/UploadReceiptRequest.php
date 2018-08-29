@@ -7,8 +7,6 @@ use \SlimCD\jsonSerializeTrait;
 /**
  * Class UploadReceiptRequest
  *
- * Upload a receipt image to the database.
- *
  * Stores a receipttext or image on the SLIM CD server so that it can be
  * retrieved at a later date. Data is base-64 encoded.
  *

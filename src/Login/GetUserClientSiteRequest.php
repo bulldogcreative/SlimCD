@@ -7,9 +7,6 @@ use \SlimCD\jsonSerializeTrait;
 /**
  * Class GetUserClientSiteRequest
  *
- * Gets specific sitename, businesstype, industrycode info for a username/
- * password or clientid/siteid.
- *
  * Retrieves a list of clients and sites for the specified username/password
  * , or a list of sites for the specified clientid, or the details on a
  * specified clientid/siteid. The information returned shows details on the

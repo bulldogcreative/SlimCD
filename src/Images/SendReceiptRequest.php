@@ -5,8 +5,6 @@ namespace SlimCD\Images;
 /**
  * Class SendReceiptRequest
  *
- * Sends a receipt via email or SMS-text.
- *
  * Email or SMS-Text delivery of receipts is performed with this function. The
  * text for receipts is generated using information on file with SLIM CD, so the
  * receipts match those produced by the SLIM CD website. Receipts for SMS-Text

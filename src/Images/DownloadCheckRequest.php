@@ -7,8 +7,6 @@ use \SlimCD\jsonSerializeTrait;
 /**
  * Class DownloadCheckRequest
  *
- * Download a check from the database.
- *
  * Downloads the check data that was stored for a specific gateid. The check
  * data is returned in the same format as was used for upload. Data is
  * base-64 encoded.

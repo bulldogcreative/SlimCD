@@ -7,8 +7,6 @@ use \SlimCD\jsonSerializeTrait;
 /**
  * Class UploadCheckRequest
  *
- * Upload a check image to the database.
- *
  * Stores a check image on the SLIM CD server so that it can be sent to the
  * processor for check conversion purposes. Data is base-64 encoded.
  *

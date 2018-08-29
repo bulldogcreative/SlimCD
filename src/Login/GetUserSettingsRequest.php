@@ -7,8 +7,6 @@ use \SlimCD\jsonSerializeTrait;
 /**
  * Class GetUserSettingsRequest
  *
- * Get settings for a specific username/password.
- *
  * Retrieves a list of settings for the username/password, including transaction
  * type permissions and any messages to be displayed to the user. Message blocks
  * contain 5 rows. Multiple message blocks can be returned as multiple settings.
