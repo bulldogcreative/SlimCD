@@ -119,6 +119,8 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * batch. Note that for most processors, transactions in the open batch can
      * still be VOIDed, UPDATEd, or have TIPEDIT performed.
      *
+     * @see https://github.com/bulldogcreative/SlimCD/blob/v2.0.0/docs/Reports.md#getopenbatch
+     *
      * @param GetOpenBatchRequest $request
      * @param bool $timeout
      * @return mixed|object
