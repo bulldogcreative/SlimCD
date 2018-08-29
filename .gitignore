@@ -4,3 +4,4 @@ composer.lock
 /coverage
 sami.phar
 docs.cfg
+docs.php
