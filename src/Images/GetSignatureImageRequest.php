@@ -4,6 +4,16 @@ namespace SlimCD\Images;
 
 /**
  * Class GetSignatureImageRequest
+ *
+ * Retrieves a bitmap version of the vector signature.
+ *
+ * Upon success, GetSignatureImage returns a status code of 200, a content-type
+ * based on the type of image requested, and binary data that represents the
+ * image. Supported image types include PNG, JPG, BMP, ICON, TIFF. In the case
+ * of an error, the content type is set to text/plain, the body contains text
+ * representing the error, the HTTP status code us set to an error code (not 200)
+ * and status text to represent the error.
+ *
  * @package SlimCD\Images
  */
 class GetSignatureImageRequest

@@ -6,6 +6,14 @@ use \SlimCD\jsonSerializeTrait;
 
 /**
  * Class GetReceiptRequest
+ *
+ * Retrieves a plain-text receipt.
+ *
+ * GetReceipt returns a content-type of text/plain that contains the data for
+ * the receipt. If an error occurs, GetReceipt sets the HTTP status code and
+ * status text to represent the error. If successful, the status code is set
+ * to 200 and the text for the receipt is returned as the body of the response.
+ *
  * @package SlimCD\Images
  */
 class GetReceiptRequest

@@ -6,6 +6,12 @@ use \SlimCD\jsonSerializeTrait;
 
 /**
  * Class UploadSignatureRequest
+ *
+ * Upload a signature image to the database.
+ *
+ * Stores a series of vectors on the SLIM CD server so they can be retrieved at
+ * a later date.Vectors are in hex. They can be in one of the four formats.
+ *
  * @package SlimCD\Images
  */
 class UploadSignatureRequest

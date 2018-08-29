@@ -6,6 +6,13 @@ use \SlimCD\jsonSerializeTrait;
 
 /**
  * Class DownloadReceiptRequest
+ *
+ * Download a receipt from the database.
+ *
+ * Downloads the receipt data that was stored for a specific gateid. The check
+ * data is returned in the same format as was used for upload. Data is base-64
+ * encoded.
+ *
  * @package SlimCD\Images
  */
 class DownloadReceiptRequest
