@@ -195,7 +195,7 @@ abstract class SlimCD implements Interfaces\SlimCD
 
     /**
      * You can disable verify peer, but it is not recommended.
-     * 
+     *
      * @param $verifyPeer
      */
     public function setVerifyPeer($verifyPeer)
