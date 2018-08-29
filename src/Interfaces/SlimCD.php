@@ -2,6 +2,6 @@
 
 namespace SlimCD\Interfaces;
 
-interface SlimCD {
-
+interface SlimCD
+{
 }

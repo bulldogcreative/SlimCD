@@ -13,7 +13,8 @@ use \SlimCD\Sessions\SendSessionRequest;
 use \SlimCD\Sessions\ShowSessionRequest;
 use \SlimCD\Sessions\SpawnSessionsRequest;
 
-interface Sessions {
+interface Sessions
+{
     public function cancelSession(CancelSessionRequest $request, $timeout = false);
     public function checkSession(CheckSessionRequest $request, $timeout = false);
     public function createSession(CreateSessionRequest $request, $timeout = false);

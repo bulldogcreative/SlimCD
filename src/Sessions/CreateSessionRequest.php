@@ -19,8 +19,8 @@ class CreateSessionRequest
     public $amount     = 0;
     public $userfields = null;
 
-    public function jsonSerialize() {
-
+    public function jsonSerialize()
+    {
         $array = array(
             'username'  => $this->username,
             'password'  => $this->password,
@@ -31,8 +31,7 @@ class CreateSessionRequest
             'transtype' => $this->transtype,
             'amount'    => $this->amount);
 
-        if (is_array($this->userfields))
-        {
+        if (is_array($this->userfields)) {
             foreach ($this->userfields as $key => $value) {
                 $array[$key] = $value;
             }

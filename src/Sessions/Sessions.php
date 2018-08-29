@@ -71,7 +71,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      */
     public function multiSession(MultiSessionRequest $request)
     {
-        if($request->amount == "") {
+        if ($request->amount == "") {
             return ($this->statsURL . "/soft/mulisession.asp?sessionid=" . urlencode($request->sessionid));
         } else {
             return ($this->statsURL . "/soft/mulisession.asp?sessionid=" . urlencode($request->sessionid) . "&amount=" . urlencode($request->amount));

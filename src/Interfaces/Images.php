@@ -12,7 +12,8 @@ use \SlimCD\Images\GetReceiptRequest;
 use \SlimCD\Images\SendReceiptRequest;
 use \SlimCD\Images\GetSignatureImageRequest;
 
-interface Images {
+interface Images
+{
     public function downloadSignature(DownloadSignatureRequest $request, $timeout = false);
     public function downloadReceipt(DownloadReceiptRequest $request, $timeout = false);
     public function downloadCheck(DownloadCheckRequest $request, $timeout = false);

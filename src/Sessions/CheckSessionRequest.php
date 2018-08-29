@@ -16,8 +16,8 @@ class CheckSessionRequest
     public $waitforcompleted = '';
     public $userfields       = null;
 
-    public function jsonSerialize() {
-
+    public function jsonSerialize()
+    {
         $array = array(
             'username'         => $this->username,
             'password'         => $this->password,
@@ -25,8 +25,7 @@ class CheckSessionRequest
             'wait'             => $this->wait,
             'waitforcompleted' => $this->waitforcompleted);
 
-        if (is_array($this->userfields))
-        {
+        if (is_array($this->userfields)) {
             foreach ($this->userfields as $key => $value) {
                 $array[$key] = $value ;
             }

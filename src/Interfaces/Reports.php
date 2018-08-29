@@ -11,7 +11,8 @@ use \SlimCD\Reports\GetOpenAuthsRequest;
 use \SlimCD\Reports\GetTransactionDetailsRequest;
 use \SlimCD\Reports\GetBatchHistoryRequest;
 
-interface Reports {
+interface Reports
+{
     public function getOpenBatch(GetOpenBatchRequest $request, $timeout = false);
     public function searchTransactions(SearchTransactionsRequest $request, $timeout = false);
     public function getDailySummary(GetDailySummaryRequest $request, $timeout = false);
