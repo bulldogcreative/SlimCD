@@ -72,7 +72,8 @@ class SendReceiptRequest
      */
     public $ccemail    = '';
 
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return array(
             'username'   => $this->username,
             'password'   => $this->password,
