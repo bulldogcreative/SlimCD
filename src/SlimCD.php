@@ -14,16 +14,22 @@ abstract class SlimCD implements Interfaces\SlimCD
     private $version = '2.0.0';
 
     /**
+     * Transaction URL.
+     *
      * @var string
      */
     public $transactionUrl = 'https://trans.slimcd.com';
 
     /**
+     * Stats URL.
+     *
      * @var string
      */
     public $statsURL = 'https://stats.slimcd.com';
 
     /**
+     * Whether or not debug mode is on. Default is off.
+     *
      * @var bool
      */
     public $debug = false;
@@ -178,6 +184,8 @@ abstract class SlimCD implements Interfaces\SlimCD
     }
 
     /**
+     * Get the current version of the client.
+     *
      * @return string
      */
     public function getVersion()
@@ -185,6 +193,11 @@ abstract class SlimCD implements Interfaces\SlimCD
         return $this->version;
     }
 
+    /**
+     * You can disable verify peer, but it is not recommended.
+     * 
+     * @param $verifyPeer
+     */
     public function setVerifyPeer($verifyPeer)
     {
         $this->verifyPeer = $verifyPeer;
