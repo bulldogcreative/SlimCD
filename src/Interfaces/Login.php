@@ -2,9 +2,9 @@
 
 namespace SlimCD\Interfaces;
 
-use \SlimCD\Login\GetUserSettingsRequest;
-use \SlimCD\Login\GetUserClientsRequest;
-use \SlimCD\Login\GetUserClientSiteRequest;
+use SlimCD\Login\GetUserSettingsRequest;
+use SlimCD\Login\GetUserClientsRequest;
+use SlimCD\Login\GetUserClientSiteRequest;
 
 interface Login
 {
@@ -17,7 +17,8 @@ interface Login
      * as multiple settings.
      *
      * @param GetUserSettingsRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed
      */
     public function getUserSettings(GetUserSettingsRequest $request, $timeout = false);
@@ -30,7 +31,8 @@ interface Login
      * password in the user hierarchy.
      *
      * @param GetUserClientsRequest $request
-     * @param bool $timeout
+     * @param bool                  $timeout
+     *
      * @return mixed
      */
     public function getUserClients(GetUserClientsRequest $request, $timeout = false);
@@ -45,7 +47,8 @@ interface Login
      * site’s setup.
      *
      * @param GetUserClientSiteRequest $request
-     * @param bool $timeout
+     * @param bool                     $timeout
+     *
      * @return mixed
      */
     public function getUserClientSite(GetUserClientSiteRequest $request, $timeout = false);

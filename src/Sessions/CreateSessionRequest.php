@@ -3,7 +3,7 @@
 namespace SlimCD\Sessions;
 
 /**
- * Class CreateSessionRequest
+ * Class CreateSessionRequest.
  *
  * CreateSession is used to create a SessionID. SessionID values are later used
  * as part of a secure and tamper-resistant URL so that a browser-style
@@ -11,8 +11,6 @@ namespace SlimCD\Sessions;
  * developer’s software. CreateSession can also be used to send initial customer
  * data to SLIM CD so that payment pages are pre-populated for the clerk,
  * providing ease of data entry.
- *
- * @package SlimCD\Sessions
  */
 class CreateSessionRequest
 {
@@ -21,57 +19,57 @@ class CreateSessionRequest
      *
      * @var string
      */
-    public $username   = '';
+    public $username = '';
 
     /**
      * Plaintext password for the client account.
      *
      * @var string
      */
-    public $password   = '';
+    public $password = '';
 
     /**
      * Assigned by the Slim CD administrator.
      *
      * @var int
      */
-    public $clientid   = 0;
+    public $clientid = 0;
 
     /**
      * Assigned by the Slim CD administrator.
      *
      * @var int
      */
-    public $siteid     = 0;
+    public $siteid = 0;
 
     /**
      * Numeric value provided by SLIMCD that is sent when processing a
-     * transaction
+     * transaction.
      *
      * @var int
      */
-    public $priceid    = 0;
+    public $priceid = 0;
 
     /**
-     * Name of the form to use when creating a session
+     * Name of the form to use when creating a session.
      *
      * @var string
      */
-    public $formname   = '';
+    public $formname = '';
 
     /**
      * Type of transaction to perform (SALE, CREDIT, VOID, etc).
      *
      * @var string
      */
-    public $transtype  = '';
+    public $transtype = '';
 
     /**
      * Amount of the transaction.
      *
      * @var int
      */
-    public $amount     = 0;
+    public $amount = 0;
 
     /**
      * This is a USER-SUPPLIED field, can be named whatever the developer wants,
@@ -87,20 +85,21 @@ class CreateSessionRequest
     public function jsonSerialize()
     {
         $array = array(
-            'username'  => $this->username,
-            'password'  => $this->password,
-            'clientid'  => $this->clientid,
-            'siteid'    => $this->siteid,
-            'priceid'   => $this->priceid,
-            'formname'  => $this->formname,
+            'username' => $this->username,
+            'password' => $this->password,
+            'clientid' => $this->clientid,
+            'siteid' => $this->siteid,
+            'priceid' => $this->priceid,
+            'formname' => $this->formname,
             'transtype' => $this->transtype,
-            'amount'    => $this->amount);
+            'amount' => $this->amount, );
 
         if (is_array($this->userfields)) {
             foreach ($this->userfields as $key => $value) {
                 $array[$key] = $value;
             }
         }
-        return ($array);
+
+        return $array;
     }
 }

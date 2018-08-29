@@ -2,10 +2,10 @@
 
 namespace SlimCD\Reports;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class GetOpenAuthsRequest
+ * Class GetOpenAuthsRequest.
  *
  * Returns a BatchTransaction record for each AUTH that has not been VOIDed or
  * FORCEd. Each of the auths will not be funded until the FORCE is performed.
@@ -13,8 +13,6 @@ use \SlimCD\jsonSerializeTrait;
  * DATE/TIME is in .NET/Microsoft SQL format of either 24-hour format as
  * “MM/DD/YYYY HH:MM:SS.mmm” or the same format as 12-hour, with AM or PM
  * appended to the date/time.
- *
- * @package SlimCD\Reports
  */
 class GetOpenAuthsRequest
 {
@@ -23,21 +21,21 @@ class GetOpenAuthsRequest
      *
      * @var string
      */
-    public $username  = '';
+    public $username = '';
 
     /**
      * Plaintext password for the client account.
      *
      * @var string
      */
-    public $password  = '';
+    public $password = '';
 
     /**
      * Assigned by the Slim CD administrator.
      *
      * @var int
      */
-    public $siteid    = 0;
+    public $siteid = 0;
 
     /**
      * Date of beginning of search.
@@ -51,7 +49,7 @@ class GetOpenAuthsRequest
      *
      * @var string
      */
-    public $enddate   = '';
+    public $enddate = '';
 
     use jsonSerializeTrait;
 }

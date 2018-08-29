@@ -2,16 +2,14 @@
 
 namespace SlimCD\Login;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class GetUserClientsRequest
+ * Class GetUserClientsRequest.
  *
  * Generates a list of all accessible client ids and the name of the client.
  * The list represents client ids available for a particular username/
  * password in the user hierarchy.
- *
- * @package SlimCD\Login
  */
 class GetUserClientsRequest
 {

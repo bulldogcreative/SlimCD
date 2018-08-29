@@ -5,8 +5,7 @@ namespace SlimCD\Reports;
 use SlimCD\SlimCD;
 
 /**
- * Class Reports
- * @package SlimCD\Reports
+ * Class Reports.
  */
 class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
 {
@@ -21,14 +20,17 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * batch.
      *
      * @param GetBatchHistoryRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getBatchHistory(GetBatchHistoryRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetBatchHistory2", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetBatchHistory2', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -41,14 +43,17 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * returned whenever possible.
      *
      * @param GetBatchSummaryRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getBatchSummary(GetBatchSummaryRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetBatchSummary2", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetBatchSummary2', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -61,14 +66,17 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * debit card transactions and not check or gift card transactions.
      *
      * @param GetClosedBatchTransactionsRequest $request
-     * @param bool $timeout
+     * @param bool                              $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getClosedBatchTransactions(GetClosedBatchTransactionsRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetClosedBatchTransactions2", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetClosedBatchTransactions2', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -79,14 +87,17 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * broken out by brand (Visa/MasterCard/Discover, etc).
      *
      * @param GetDailySummaryRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getDailySummary(GetDailySummaryRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetDailySummary", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetDailySummary', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -101,14 +112,17 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * AM or PM appended to the date/time.
      *
      * @param GetOpenAuthsRequest $request
-     * @param bool $timeout
+     * @param bool                $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getOpenAuths(GetOpenAuthsRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetOpenAuths2", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetOpenAuths2', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -120,14 +134,17 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * still be VOIDed, UPDATEd, or have TIPEDIT performed.
      *
      * @param GetOpenBatchRequest $request
-     * @param bool $timeout
+     * @param bool                $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getOpenBatch(GetOpenBatchRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetOpenBatch2", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetOpenBatch2', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -139,14 +156,17 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * gift.
      *
      * @param GetTransactionDetailsRequest $request
-     * @param bool $timeout
+     * @param bool                         $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getTransactionDetails(GetTransactionDetailsRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetTransactionDetails2", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetTransactionDetails2', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -161,13 +181,16 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * returned with the most recent first.
      *
      * @param SearchTransactionsRequest $request
-     * @param bool $timeout
+     * @param bool                      $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function searchTransactions(SearchTransactionsRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=SearchTransactions2", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=SearchTransactions2', $timeout, $request->jsonSerialize());
     }
 }

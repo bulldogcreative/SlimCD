@@ -2,17 +2,15 @@
 
 namespace SlimCD\Reports;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class GetClosedBatchTransactionsRequest
+ * Class GetClosedBatchTransactionsRequest.
  *
  * GetClosedBatchTransactions lists the individual credit card transactions for
  * the siteid and batched specified. A BatchTransaction item is returned for
  * each transaction in the batch. Note that batches only contain credit/debit
  * card transactions and not check or gift card transactions.
- *
- * @package SlimCD\Reports
  */
 class GetClosedBatchTransactionsRequest
 {
@@ -35,15 +33,14 @@ class GetClosedBatchTransactionsRequest
      *
      * @var int
      */
-    public $siteid   = 0;
+    public $siteid = 0;
 
     /**
      * Value returned from GetBatchHistory that identifies an individual batch.
      *
      * @var int
      */
-    public $batchid  = 0;
-
+    public $batchid = 0;
 
     use jsonSerializeTrait;
 }

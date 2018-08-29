@@ -3,11 +3,9 @@
 namespace SlimCD\Sessions;
 
 /**
- * Class CheckSessionRequest
+ * Class CheckSessionRequest.
  *
  * Check a session.
- *
- * @package SlimCD\Sessions
  */
 class CheckSessionRequest
 {
@@ -16,29 +14,29 @@ class CheckSessionRequest
      *
      * @var string
      */
-    public $username         = '';
+    public $username = '';
 
     /**
      * Plaintext password for the client account.
      *
      * @var string
      */
-    public $password         = '';
+    public $password = '';
 
     /**
-     * HEX string uniquely representing the session
+     * HEX string uniquely representing the session.
      *
      * @var string
      */
-    public $sessionid        = '';
+    public $sessionid = '';
 
     /**
      * Time to wait, in seconds, for CheckSession to wait while the session is
-     * being completed by the user
+     * being completed by the user.
      *
      * @var int
      */
-    public $wait             = 0;
+    public $wait = 0;
 
     /**
      * Yes/no indicating that the CheckSession should not return intermediate
@@ -58,22 +56,23 @@ class CheckSessionRequest
      *
      * @var null
      */
-    public $userfields       = null;
+    public $userfields = null;
 
     public function jsonSerialize()
     {
         $array = array(
-            'username'         => $this->username,
-            'password'         => $this->password,
-            'sessionid'        => $this->sessionid,
-            'wait'             => $this->wait,
-            'waitforcompleted' => $this->waitforcompleted);
+            'username' => $this->username,
+            'password' => $this->password,
+            'sessionid' => $this->sessionid,
+            'wait' => $this->wait,
+            'waitforcompleted' => $this->waitforcompleted, );
 
         if (is_array($this->userfields)) {
             foreach ($this->userfields as $key => $value) {
-                $array[$key] = $value ;
+                $array[$key] = $value;
             }
         }
-        return ($array) ;
+
+        return $array;
     }
 }

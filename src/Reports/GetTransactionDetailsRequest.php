@@ -2,15 +2,13 @@
 
 namespace SlimCD\Reports;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class GetTransactionDetailsRequest
+ * Class GetTransactionDetailsRequest.
  *
  * Returns a standard Transaction item, with all of the details needed to
  * reprint a receipt or identify the type of transaction as card, check, or gift.
- *
- * @package SlimCD\Reports
  */
 class GetTransactionDetailsRequest
 {
@@ -33,7 +31,7 @@ class GetTransactionDetailsRequest
      *
      * @var int
      */
-    public $siteid   = 0;
+    public $siteid = 0;
 
     use jsonSerializeTrait;
 }

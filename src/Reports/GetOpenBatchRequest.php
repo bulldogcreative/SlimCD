@@ -2,16 +2,14 @@
 
 namespace SlimCD\Reports;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class GetOpenBatchRequest
+ * Class GetOpenBatchRequest.
  *
  * Returns one BatchTransaction record for each transaction in the current batch
  * . Note that for most processors, transactions in the open batch can still be
  * VOIDed, UPDATEd, or have TIPEDIT performed.
- *
- * @package SlimCD\Reports
  */
 class GetOpenBatchRequest
 {
@@ -34,7 +32,7 @@ class GetOpenBatchRequest
      *
      * @var int
      */
-    public $siteid   = 0;
+    public $siteid = 0;
 
     use jsonSerializeTrait;
 }

@@ -2,18 +2,16 @@
 
 namespace SlimCD\Reports;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class SearchTransactionsRequest
+ * Class SearchTransactionsRequest.
  *
  * Returns a standard Transaction item for each item in the search criteria.
  * Transaction search is done by date range. Just the count, or the transactions
  * themselves can be returned. A maximum can be set so that the return set is
  * limited. The order can be reversed by specifying “reverseorder” in the search
  * criteria, which causes the items to be returned with the most recent first.
- *
- * @package SlimCD\Reports
  */
 class SearchTransactionsRequest
 {
@@ -22,98 +20,98 @@ class SearchTransactionsRequest
      *
      * @var string
      */
-    public $username        = '';
+    public $username = '';
 
     /**
      * Plaintext password for the client account.
      *
      * @var string
      */
-    public $password        = '';
+    public $password = '';
 
     /**
-     * true/false
+     * true/false.
      *
      * @var bool
      */
     public $recordcountonly = false;
 
     /**
-     * Maximum number of records returnd by the Search
+     * Maximum number of records returnd by the Search.
      *
      * @var int
      */
-    public $maxrecords      = 0;
+    public $maxrecords = 0;
 
     /**
      * Date of beginning of search.
      *
      * @var string
      */
-    public $startdate       = '';
+    public $startdate = '';
 
     /**
      * 	Date of end of search.
      *
      * @var string
      */
-    public $enddate         = '';
+    public $enddate = '';
 
     /**
      * Assigned by the Slim CD administrator.
      *
      * @var int
      */
-    public $clientid        = 0;
+    public $clientid = 0;
 
     /**
-     * First name of cardholder
+     * First name of cardholder.
      *
      * @var string
      */
-    public $firstname       = '';
+    public $firstname = '';
 
     /**
-     * Last name of cardholder
+     * Last name of cardholder.
      *
      * @var string
      */
-    public $lastname        = '';
+    public $lastname = '';
 
     /**
      * City.
      *
      * @var string
      */
-    public $city            = '';
+    public $city = '';
 
     /**
      * State.
      *
      * @var string
      */
-    public $state           = '';
+    public $state = '';
 
     /**
      * Zip.
      *
      * @var int
      */
-    public $zip             = 0;
+    public $zip = 0;
 
     /**
-     * Cardholder Email address
+     * Cardholder Email address.
      *
      * @var string
      */
-    public $email           = '';
+    public $email = '';
 
     /**
-     * Amount to credit (USD)
+     * Amount to credit (USD).
      *
      * @var string
      */
-    public $amount          = '';
+    public $amount = '';
 
     /**
      * Client-supplied transaction identifier, (i.e. receipt number) which will
@@ -121,56 +119,56 @@ class SearchTransactionsRequest
      *
      * @var string
      */
-    public $clienttransref  = '';
+    public $clienttransref = '';
 
     /**
-     * (See Transaction Type Table for Legal Values)
+     * (See Transaction Type Table for Legal Values).
      *
      * @var string
      */
-    public $transtype       = '';
+    public $transtype = '';
 
     /**
-     * Card number – used for verification
+     * Card number – used for verification.
      *
      * @var int
      */
-    public $cardnumber      = 0;
+    public $cardnumber = 0;
 
     /**
-     * Integer representing unique card value returned by SearchTransaction
+     * Integer representing unique card value returned by SearchTransaction.
      *
      * @var string
      */
-    public $cardid          = '';
+    public $cardid = '';
 
     /**
-     * First 4 or last 4 of card (last 3 for amex)
+     * First 4 or last 4 of card (last 3 for amex).
      *
      * @var string
      */
-    public $cardpart        = '';
+    public $cardpart = '';
 
     /**
-     * Clerk/Salesperson Name/ID
+     * Clerk/Salesperson Name/ID.
      *
      * @var string
      */
-    public $clerkname       = '';
+    public $clerkname = '';
 
     /**
      * Gateway ID for previous transaction.
      *
      * @var int
      */
-    public $gateid          = 0;
+    public $gateid = 0;
 
     /**
-     * Yes/no, causes results to be reversed with most recent first
+     * Yes/no, causes results to be reversed with most recent first.
      *
      * @var string
      */
-    public $reverseorder    = '';
+    public $reverseorder = '';
 
     use jsonSerializeTrait;
 }

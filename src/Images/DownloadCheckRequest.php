@@ -2,16 +2,14 @@
 
 namespace SlimCD\Images;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class DownloadCheckRequest
+ * Class DownloadCheckRequest.
  *
  * Downloads the check data that was stored for a specific gateid. The check
  * data is returned in the same format as was used for upload. Data is
  * base-64 encoded.
- *
- * @package SlimCD\Images
  */
 class DownloadCheckRequest
 {
@@ -34,7 +32,7 @@ class DownloadCheckRequest
      *
      * @var int
      */
-    public $gateid   = 0;
+    public $gateid = 0;
 
     use jsonSerializeTrait;
 }

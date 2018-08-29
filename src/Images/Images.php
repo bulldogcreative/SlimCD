@@ -5,8 +5,7 @@ namespace SlimCD\Images;
 use SlimCD\SlimCD;
 
 /**
- * Class Images
- * @package SlimCD\Images
+ * Class Images.
  */
 class Images extends SlimCD implements \SlimCD\Interfaces\Images
 {
@@ -17,14 +16,17 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * The data is returned as vector-encoded hex bytes.
      *
      * @param DownloadSignatureRequest $request
-     * @param bool $timeout
+     * @param bool                     $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function downloadSignature(DownloadSignatureRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=DownloadSignature", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=DownloadSignature', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -35,14 +37,17 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * Data is base-64 encoded.
      *
      * @param DownloadReceiptRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function downloadReceipt(DownloadReceiptRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=DownloadReceipt", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=DownloadReceipt', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -53,16 +58,18 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * base-64 encoded.
      *
      * @param DownloadCheckRequest $request
-     * @param bool $timeout
+     * @param bool                 $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function downloadCheck(DownloadCheckRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=DownloadCheck", $timeout, $request->jsonSerialize()));
-    }
 
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=DownloadCheck', $timeout, $request->jsonSerialize());
+    }
 
     /**
      * Upload a signature image to the database.
@@ -72,14 +79,17 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * formats.
      *
      * @param UploadSignatureRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function uploadSignature(UploadSignatureRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->transactionUrl . "/soft/json/jsonscript.asp?service=UploadSignature", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->transactionUrl.'/soft/json/jsonscript.asp?service=UploadSignature', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -89,14 +99,17 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * retrieved at a later date. Data is base-64 encoded.
      *
      * @param UploadReceiptRequest $request
-     * @param bool $timeout
+     * @param bool                 $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function uploadReceipt(UploadReceiptRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->transactionUrl . "/soft/json/jsonscript.asp?service=UploadReceipt", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->transactionUrl.'/soft/json/jsonscript.asp?service=UploadReceipt', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -106,14 +119,17 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * processor for check conversion purposes. Data is base-64 encoded.
      *
      * @param UploadCheckRequest $request
-     * @param bool $timeout
+     * @param bool               $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function uploadCheck(UploadCheckRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->transactionUrl . "/soft/json/jsonscript.asp?service=UploadCheck", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->transactionUrl.'/soft/json/jsonscript.asp?service=UploadCheck', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -126,14 +142,17 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * of the response.
      *
      * @param GetReceiptRequest $request
-     * @param bool $timeout
+     * @param bool              $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getReceipt(GetReceiptRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetReceipt", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetReceipt', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -146,14 +165,17 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * data.
      *
      * @param SendReceiptRequest $request
-     * @param bool $timeout
+     * @param bool               $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function sendReceipt(SendReceiptRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->transactionUrl . "/soft/json/jsonscript.asp?service=SendReceipt", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->transactionUrl.'/soft/json/jsonscript.asp?service=SendReceipt', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -167,13 +189,16 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * an error code (not 200) and status text to represent the error.
      *
      * @param GetSignatureImageRequest $request
-     * @param bool $timeout
+     * @param bool                     $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getSignatureImage(GetSignatureImageRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->transactionUrl . "/soft/json/jsonscript.asp?service=GetSignatureImage", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->transactionUrl.'/soft/json/jsonscript.asp?service=GetSignatureImage', $timeout, $request->jsonSerialize());
     }
 }

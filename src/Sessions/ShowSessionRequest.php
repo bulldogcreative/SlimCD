@@ -3,8 +3,7 @@
 namespace SlimCD\Sessions;
 
 /**
- * Class ShowSessionRequest
- * @package SlimCD\Sessions
+ * Class ShowSessionRequest.
  */
 class ShowSessionRequest
 {

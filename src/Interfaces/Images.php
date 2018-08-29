@@ -2,19 +2,18 @@
 
 namespace SlimCD\Interfaces;
 
-use \SlimCD\Images\DownloadSignatureRequest;
-use \SlimCD\Images\DownloadReceiptRequest;
-use \SlimCD\Images\DownloadCheckRequest;
-use \SlimCD\Images\UploadSignatureRequest;
-use \SlimCD\Images\UploadReceiptRequest;
-use \SlimCD\Images\UploadCheckRequest;
-use \SlimCD\Images\GetReceiptRequest;
-use \SlimCD\Images\SendReceiptRequest;
-use \SlimCD\Images\GetSignatureImageRequest;
+use SlimCD\Images\DownloadSignatureRequest;
+use SlimCD\Images\DownloadReceiptRequest;
+use SlimCD\Images\DownloadCheckRequest;
+use SlimCD\Images\UploadSignatureRequest;
+use SlimCD\Images\UploadReceiptRequest;
+use SlimCD\Images\UploadCheckRequest;
+use SlimCD\Images\GetReceiptRequest;
+use SlimCD\Images\SendReceiptRequest;
+use SlimCD\Images\GetSignatureImageRequest;
 
 /**
- * Interface Images
- * @package SlimCD\Interfaces
+ * Interface Images.
  */
 interface Images
 {
@@ -25,7 +24,8 @@ interface Images
      * The data is returned as vector-encoded hex bytes.
      *
      * @param DownloadSignatureRequest $request
-     * @param bool $timeout
+     * @param bool                     $timeout
+     *
      * @return mixed
      */
     public function downloadSignature(DownloadSignatureRequest $request, $timeout = false);
@@ -38,7 +38,8 @@ interface Images
      * Data is base-64 encoded.
      *
      * @param DownloadReceiptRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed
      */
     public function downloadReceipt(DownloadReceiptRequest $request, $timeout = false);
@@ -51,7 +52,8 @@ interface Images
      * base-64 encoded.
      *
      * @param DownloadCheckRequest $request
-     * @param bool $timeout
+     * @param bool                 $timeout
+     *
      * @return mixed
      */
     public function downloadCheck(DownloadCheckRequest $request, $timeout = false);
@@ -64,7 +66,8 @@ interface Images
      * formats.
      *
      * @param UploadSignatureRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed
      */
     public function uploadSignature(UploadSignatureRequest $request, $timeout = false);
@@ -76,7 +79,8 @@ interface Images
      * retrieved at a later date. Data is base-64 encoded.
      *
      * @param UploadReceiptRequest $request
-     * @param bool $timeout
+     * @param bool                 $timeout
+     *
      * @return mixed
      */
     public function uploadReceipt(UploadReceiptRequest $request, $timeout = false);
@@ -88,7 +92,8 @@ interface Images
      * processor for check conversion purposes. Data is base-64 encoded.
      *
      * @param UploadCheckRequest $request
-     * @param bool $timeout
+     * @param bool               $timeout
+     *
      * @return mixed
      */
     public function uploadCheck(UploadCheckRequest $request, $timeout = false);
@@ -103,7 +108,8 @@ interface Images
      * response.
      *
      * @param GetReceiptRequest $request
-     * @param bool $timeout
+     * @param bool              $timeout
+     *
      * @return mixed
      */
     public function getReceipt(GetReceiptRequest $request, $timeout = false);
@@ -118,7 +124,8 @@ interface Images
      * data.
      *
      * @param SendReceiptRequest $request
-     * @param bool $timeout
+     * @param bool               $timeout
+     *
      * @return mixed
      */
     public function sendReceipt(SendReceiptRequest $request, $timeout = false);
@@ -134,7 +141,8 @@ interface Images
      * an error code (not 200) and status text to represent the error.
      *
      * @param GetSignatureImageRequest $request
-     * @param bool $timeout
+     * @param bool                     $timeout
+     *
      * @return mixed
      */
     public function getSignatureImage(GetSignatureImageRequest $request, $timeout = false);

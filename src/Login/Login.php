@@ -5,8 +5,7 @@ namespace SlimCD\Login;
 use SlimCD\SlimCD;
 
 /**
- * Class Login
- * @package SlimCD\Login
+ * Class Login.
  */
 class Login extends SlimCD implements \SlimCD\Interfaces\Login
 {
@@ -19,14 +18,17 @@ class Login extends SlimCD implements \SlimCD\Interfaces\Login
      * as multiple settings.
      *
      * @param GetUserSettingsRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getUserSettings(GetUserSettingsRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetUserSettings", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetUserSettings', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -37,14 +39,17 @@ class Login extends SlimCD implements \SlimCD\Interfaces\Login
      * password in the user hierarchy.
      *
      * @param GetUserClientsRequest $request
-     * @param bool $timeout
+     * @param bool                  $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getUserClients(GetUserClientsRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetUserClients", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetUserClients', $timeout, $request->jsonSerialize());
     }
 
     /**
@@ -57,13 +62,16 @@ class Login extends SlimCD implements \SlimCD\Interfaces\Login
      * site’s setup.
      *
      * @param GetUserClientSiteRequest $request
-     * @param bool $timeout
+     * @param bool                     $timeout
+     *
      * @return mixed|object
+     *
      * @throws \Exception
      */
     public function getUserClientSite(GetUserClientSiteRequest $request, $timeout = false)
     {
         $timeout = $this->getTimeout($timeout);
-        return ($this->httpPost($this->statsURL . "/soft/json/jsonscript.asp?service=GetUserClientSite", $timeout, $request->jsonSerialize()));
+
+        return $this->httpPost($this->statsURL.'/soft/json/jsonscript.asp?service=GetUserClientSite', $timeout, $request->jsonSerialize());
     }
 }

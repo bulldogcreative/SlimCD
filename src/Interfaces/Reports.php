@@ -2,14 +2,14 @@
 
 namespace SlimCD\Interfaces;
 
-use \SlimCD\Reports\GetOpenBatchRequest;
-use \SlimCD\Reports\SearchTransactionsRequest;
-use \SlimCD\Reports\GetDailySummaryRequest;
-use \SlimCD\Reports\GetBatchSummaryRequest;
-use \SlimCD\Reports\GetClosedBatchTransactionsRequest;
-use \SlimCD\Reports\GetOpenAuthsRequest;
-use \SlimCD\Reports\GetTransactionDetailsRequest;
-use \SlimCD\Reports\GetBatchHistoryRequest;
+use SlimCD\Reports\GetOpenBatchRequest;
+use SlimCD\Reports\SearchTransactionsRequest;
+use SlimCD\Reports\GetDailySummaryRequest;
+use SlimCD\Reports\GetBatchSummaryRequest;
+use SlimCD\Reports\GetClosedBatchTransactionsRequest;
+use SlimCD\Reports\GetOpenAuthsRequest;
+use SlimCD\Reports\GetTransactionDetailsRequest;
+use SlimCD\Reports\GetBatchHistoryRequest;
 
 interface Reports
 {
@@ -24,7 +24,8 @@ interface Reports
      * batch.
      *
      * @param GetBatchHistoryRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed
      */
     public function getBatchHistory(GetBatchHistoryRequest $request, $timeout = false);
@@ -39,7 +40,8 @@ interface Reports
      * returned whenever possible.
      *
      * @param GetBatchSummaryRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed
      */
     public function getBatchSummary(GetBatchSummaryRequest $request, $timeout = false);
@@ -54,7 +56,8 @@ interface Reports
      * debit card transactions and not check or gift card transactions.
      *
      * @param GetClosedBatchTransactionsRequest $request
-     * @param bool $timeout
+     * @param bool                              $timeout
+     *
      * @return mixed
      */
     public function getClosedBatchTransactions(GetClosedBatchTransactionsRequest $request, $timeout = false);
@@ -67,7 +70,8 @@ interface Reports
      * broken out by brand (Visa/MasterCard/Discover, etc).
      *
      * @param GetDailySummaryRequest $request
-     * @param bool $timeout
+     * @param bool                   $timeout
+     *
      * @return mixed
      */
     public function getDailySummary(GetDailySummaryRequest $request, $timeout = false);
@@ -84,7 +88,8 @@ interface Reports
      * AM or PM appended to the date/time.
      *
      * @param GetOpenAuthsRequest $request
-     * @param bool $timeout
+     * @param bool                $timeout
+     *
      * @return mixed
      */
     public function getOpenAuths(GetOpenAuthsRequest $request, $timeout = false);
@@ -98,7 +103,8 @@ interface Reports
      * still be VOIDed, UPDATEd, or have TIPEDIT performed.
      *
      * @param GetOpenBatchRequest $request
-     * @param bool $timeout
+     * @param bool                $timeout
+     *
      * @return mixed
      */
     public function getOpenBatch(GetOpenBatchRequest $request, $timeout = false);
@@ -112,7 +118,8 @@ interface Reports
      * gift.
      *
      * @param GetTransactionDetailsRequest $request
-     * @param bool $timeout
+     * @param bool                         $timeout
+     *
      * @return mixed
      */
     public function getTransactionDetails(GetTransactionDetailsRequest $request, $timeout = false);
@@ -129,7 +136,8 @@ interface Reports
      * returned with the most recent first.
      *
      * @param SearchTransactionsRequest $request
-     * @param bool $timeout
+     * @param bool                      $timeout
+     *
      * @return mixed
      */
     public function searchTransactions(SearchTransactionsRequest $request, $timeout = false);

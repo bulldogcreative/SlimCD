@@ -2,17 +2,15 @@
 
 namespace SlimCD\Login;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class GetUserClientSiteRequest
+ * Class GetUserClientSiteRequest.
  *
  * Retrieves a list of clients and sites for the specified username/password
  * , or a list of sites for the specified clientid, or the details on a
  * specified clientid/siteid. The information returned shows details on the
  * site’s setup.
- *
- * @package SlimCD\Login
  */
 class GetUserClientSiteRequest
 {
@@ -42,7 +40,7 @@ class GetUserClientSiteRequest
      *
      * @var int
      */
-    public $siteid   = 0;
+    public $siteid = 0;
 
     use jsonSerializeTrait;
 }

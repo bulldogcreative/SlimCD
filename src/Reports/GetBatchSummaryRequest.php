@@ -2,17 +2,15 @@
 
 namespace SlimCD\Reports;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class GetBatchSummaryRequest
+ * Class GetBatchSummaryRequest.
  *
  * GetBatchSummary iterates through batches in the specified date range and
  * creates summations for the batches within the requested range. Transaction
  * counts, gross sales, gross refunds and net income are returned whenever
  * possible.
- *
- * @package SlimCD\Reports
  */
 class GetBatchSummaryRequest
 {
@@ -21,21 +19,21 @@ class GetBatchSummaryRequest
      *
      * @var string
      */
-    public $username  = '';
+    public $username = '';
 
     /**
      * Plaintext password for the client account.
      *
      * @var string
      */
-    public $password  = '';
+    public $password = '';
 
     /**
      * Assigned by the Slim CD administrator.
      *
      * @var int
      */
-    public $siteid    = 0;
+    public $siteid = 0;
 
     /**
      * Date of beginning of search.
@@ -49,7 +47,7 @@ class GetBatchSummaryRequest
      *
      * @var string
      */
-    public $enddate   = '';
+    public $enddate = '';
 
     use jsonSerializeTrait;
 }
