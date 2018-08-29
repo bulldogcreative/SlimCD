@@ -14,6 +14,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param DownloadSignatureRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function downloadSignature(DownloadSignatureRequest $request, $timeout = false)
     {
@@ -25,6 +26,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param DownloadReceiptRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function downloadReceipt(DownloadReceiptRequest $request, $timeout = false)
     {
@@ -36,6 +38,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param DownloadCheckRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function downloadCheck(DownloadCheckRequest $request, $timeout = false)
     {
@@ -48,6 +51,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param UploadSignatureRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function uploadSignature(UploadSignatureRequest $request, $timeout = false)
     {
@@ -59,6 +63,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param UploadReceiptRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function uploadReceipt(UploadReceiptRequest $request, $timeout = false)
     {
@@ -70,6 +75,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param UploadCheckRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function uploadCheck(UploadCheckRequest $request, $timeout = false)
     {
@@ -81,6 +87,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param GetReceiptRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function getReceipt(GetReceiptRequest $request, $timeout = false)
     {
@@ -92,6 +99,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param SendReceiptRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function sendReceipt(SendReceiptRequest $request, $timeout = false)
     {
@@ -103,6 +111,7 @@ class Images extends SlimCD implements \SlimCD\Interfaces\Images
      * @param GetSignatureImageRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function getSignatureImage(GetSignatureImageRequest $request, $timeout = false)
     {

@@ -8,10 +8,35 @@ namespace SlimCD\Images;
  */
 class GetSignatureImageRequest
 {
-    // property declaration
-    public $username    = '';
-    public $password    = '';
-    public $gateid      = 0;
+    /**
+     * Username or API Access Credential that accesses web service.
+     *
+     * @var string
+     */
+    public $username = '';
+
+    /**
+     * Plaintext password for the client account.
+     *
+     * @var string
+     */
+    public $password = '';
+
+    /**
+     * Gateway ID for previous transaction.
+     *
+     * @var int
+     */
+    public $gateid   = 0;
+
+    /**
+     * Represents type of data ID for previous transaction.
+     *
+     * @var string
+     */
+    public $filetype = '';
+
+
     public $imgflag     = 'PNG';
     public $height      = null;
     public $width       = null;

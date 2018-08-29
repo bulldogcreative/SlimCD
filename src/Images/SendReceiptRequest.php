@@ -8,15 +8,68 @@ namespace SlimCD\Images;
  */
 class SendReceiptRequest
 {
-    // property declaration
-    public $username   = '';
-    public $password   = '';
-    public $gateid     = 0;
+    /**
+     * Username or API Access Credential that accesses web service.
+     *
+     * @var string
+     */
+    public $username = '';
+
+    /**
+     * Plaintext password for the client account.
+     *
+     * @var string
+     */
+    public $password = '';
+
+    /**
+     * Gateway ID for previous transaction.
+     *
+     * @var int
+     */
+    public $gateid   = 0;
+
+    /**
+     * Yes/no causes SMS text to be sent if phone number provided
+     *
+     * @var string
+     */
     public $send_sms   = 'no';
+
+    /**
+     * Cardholder phone number
+     *
+     * @var int
+     */
     public $phone      = '';
+
+    /**
+     * Yes/no causes email to be sent.
+     *
+     * @var string
+     */
     public $send_email = 'no';
+
+    /**
+     * Cardholder Email address
+     *
+     * @var string
+     */
     public $email      = '';
+
+    /**
+     * Yes/no causes SMS text to be sent
+     *
+     * @var string
+     */
     public $send_cc    = 'no';
+
+    /**
+     * Email address of recipient for a carbon-copy of receipt (overrides
+     * merchant settings stored on SLIMCD.COM)
+     *
+     * @var string
+     */
     public $ccemail    = '';
 
     public function jsonSerialize() {
