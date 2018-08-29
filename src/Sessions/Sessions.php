@@ -14,6 +14,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param CancelSessionRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function cancelSession(CancelSessionRequest $request, $timeout = false)
     {
@@ -25,6 +26,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param CheckSessionRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function checkSession(CheckSessionRequest $request, $timeout = false)
     {
@@ -36,6 +38,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param CreateSessionRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function createSession(CreateSessionRequest $request, $timeout = false)
     {
@@ -47,6 +50,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param DestroySessionsRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function destroySessions(DestroySessionsRequest $request, $timeout = false)
     {
@@ -58,6 +62,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param GetSessionFieldsRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function getSessionFields(GetSessionFieldsRequest $request, $timeout = false)
     {
@@ -82,6 +87,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param SearchSessionsRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function searchSessions(SearchSessionsRequest $request, $timeout = false)
     {
@@ -93,6 +99,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param SendSessionRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function sendSession(SendSessionRequest $request, $timeout = false)
     {
@@ -113,6 +120,7 @@ class Sessions extends SlimCD implements \SlimCD\Interfaces\Sessions
      * @param SpawnSessionsRequest $request
      * @param bool $timeout
      * @return mixed|object
+     * @throws \Exception
      */
     public function spawnSessions(SpawnSessionsRequest $request, $timeout = false)
     {
