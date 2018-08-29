@@ -63,6 +63,8 @@ abstract class SlimCD implements Interfaces\SlimCD
     protected $verifyPeer = true;
 
     /**
+     * Create an error using the URL and error message.
+     *
      * @param $url
      * @param $errorMessage
      *
@@ -85,6 +87,8 @@ abstract class SlimCD implements Interfaces\SlimCD
     }
 
     /**
+     * Use curl to POST the request to SlimCd.
+     *
      * @param $urlString
      * @param $timeout
      * @param $nameValueArray
@@ -168,6 +172,8 @@ abstract class SlimCD implements Interfaces\SlimCD
     }
 
     /**
+     * Get current timeout value from property.
+     *
      * @param $timeout
      *
      * @return int
