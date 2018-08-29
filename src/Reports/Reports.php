@@ -120,6 +120,7 @@ class Reports extends SlimCD implements \SlimCD\Interfaces\Reports
      * still be VOIDed, UPDATEd, or have TIPEDIT performed.
      *
      * ```php
+     * <?php
      * // Instantiate a new get open batch request class
      * $request = new SlimCD\Reports\GetOpenBatchRequest();
      *
