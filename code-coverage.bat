@@ -1,1 +1,0 @@
-phpunit --configuration phpunit.xml --coverage-html ./coverage
