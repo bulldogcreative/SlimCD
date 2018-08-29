@@ -2,11 +2,14 @@
 
 namespace SlimCD\Images;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class DownloadReceiptRequest
- * @package SlimCD\Images
+ * Class DownloadReceiptRequest.
+ *
+ * Downloads the receipt data that was stored for a specific gateid. The check
+ * data is returned in the same format as was used for upload. Data is base-64
+ * encoded.
  */
 class DownloadReceiptRequest
 {
@@ -29,7 +32,7 @@ class DownloadReceiptRequest
      *
      * @var int
      */
-    public $gateid   = 0;
+    public $gateid = 0;
 
     use jsonSerializeTrait;
 }

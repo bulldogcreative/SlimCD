@@ -2,11 +2,13 @@
 
 namespace SlimCD\Images;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class DownloadSignatureRequest
- * @package SlimCD\Images
+ * Class DownloadSignatureRequest.
+ *
+ * Downloads the vector signature data that was stored for a specific gateid.
+ * The data is returned as vector-encoded hex bytes.
  */
 class DownloadSignatureRequest
 {
@@ -29,7 +31,7 @@ class DownloadSignatureRequest
      *
      * @var int
      */
-    public $gateid   = 0;
+    public $gateid = 0;
 
     use jsonSerializeTrait;
 }

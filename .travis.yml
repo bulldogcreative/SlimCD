@@ -5,8 +5,12 @@ php:
   - 7.2
   - nightly
 
+install:
+  - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
+  - composer install $flags
 before_script:
-  - composer self-update
-  - composer install --prefer-source --no-interaction --dev
+  - composer require satooshi/php-coveralls '~1.0'
+script: phpunit --coverage-clover clover.xml
 
-script: phpunit
+after_script:
+  - vendor/bin/coveralls -v

@@ -2,16 +2,27 @@
 
 namespace SlimCD\Sessions;
 
-use \SlimCD\jsonSerializeTrait;
+use SlimCD\jsonSerializeTrait;
 
 /**
- * Class SpawnSessionsRequest
- * @package SlimCD\Sessions
+ * Class SpawnSessionsRequest.
+ *
+ * Spawn a new sessionid from an old one.
  */
 class SpawnSessionsRequest
 {
-    // property declaration
-    public $amount    = '';
+    /**
+     * Amount of the transaction.
+     *
+     * @var string
+     */
+    public $amount = '';
+
+    /**
+     * HEX string uniquely representing the session.
+     *
+     * @var string
+     */
     public $sessionid = '';
 
     use jsonSerializeTrait;
