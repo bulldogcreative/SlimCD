@@ -3,6 +3,7 @@
 For use with [SlimCD](https://stats.slimcd.com/) payment gateway.
 
 [![Build Status](https://travis-ci.org/bulldogcreative/SlimCD.svg?branch=v2.0.0)](https://travis-ci.org/bulldogcreative/SlimCD)
+[![Coverage Status](https://coveralls.io/repos/github/bulldogcreative/SlimCD/badge.svg?branch=dev%2Fdocs)](https://coveralls.io/github/bulldogcreative/SlimCD?branch=dev%2Fdocs)
 
 ## Installation
 
