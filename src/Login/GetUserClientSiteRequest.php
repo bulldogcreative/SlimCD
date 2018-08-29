@@ -14,7 +14,7 @@ use \SlimCD\jsonSerializeTrait;
  * , or a list of sites for the specified clientid, or the details on a
  * specified clientid/siteid. The information returned shows details on the
  * site’s setup.
- * 
+ *
  * @package SlimCD\Login
  */
 class GetUserClientSiteRequest
