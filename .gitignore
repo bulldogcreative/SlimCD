@@ -5,3 +5,4 @@ composer.lock
 sami.phar
 docs.cfg
 docs.php
+.phpunit.result.cache
