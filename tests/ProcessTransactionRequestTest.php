@@ -14,7 +14,7 @@ class ProcessTransactionRequestTest extends TestCase
     public function testProcessTransactionJsonSerialize()
     {
         $ProcessTransactionRequest = new ProcessTransactionRequest();
-        $this->assertInternalType('array', $ProcessTransactionRequest->jsonSerialize());
+        $this->assertIsArray($ProcessTransactionRequest->jsonSerialize());
     }
 
     public function testProcessTransaction()
