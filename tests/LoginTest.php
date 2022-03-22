@@ -15,29 +15,29 @@ class LoginTest extends TestCase
     {
         $testObject = new \SlimCD\Login\GetUserClientSiteRequest();
         $this->assertInstanceOf('\SlimCD\Login\GetUserClientSiteRequest', $testObject);
-        $this->assertInternalType('array', $testObject->jsonSerialize());
+        $this->assertIsArray($testObject->jsonSerialize());
         $login = new Login();
         $result = $login->getUserClientSite($testObject);
-        $this->assertInternalType('string', $result->response);
+        $this->assertIsString($result->response);
     }
 
     public function testGetUserClientsRequest()
     {
         $testObject = new \SlimCD\Login\GetUserClientsRequest();
         $this->assertInstanceOf('\SlimCD\Login\GetUserClientsRequest', $testObject);
-        $this->assertInternalType('array', $testObject->jsonSerialize());
+        $this->assertIsArray($testObject->jsonSerialize());
         $login = new Login();
         $result = $login->getUserClients($testObject);
-        $this->assertInternalType('string', $result->response);
+        $this->assertIsString($result->response);
     }
 
     public function testGetUserSettingsRequest()
     {
         $testObject = new \SlimCD\Login\GetUserSettingsRequest();
         $this->assertInstanceOf('\SlimCD\Login\GetUserSettingsRequest', $testObject);
-        $this->assertInternalType('array', $testObject->jsonSerialize());
+        $this->assertIsArray($testObject->jsonSerialize());
         $login = new Login();
         $result = $login->getUserSettings($testObject);
-        $this->assertInternalType('string', $result->response);
+        $this->assertIsString($result->response);
     }
 }

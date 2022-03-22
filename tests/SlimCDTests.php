@@ -10,6 +10,6 @@ class SlimCDTests extends TestCase
         $transact = new Transact();
         $ProcessTransactionRequest = new \SlimCD\Transact\ProcessTransactionRequest();
         $reply = $transact->processTransaction($ProcessTransactionRequest);
-        $this->assertInternalType('string', $reply->response);
+        $this->assertIsString($reply->response);
     }
 }

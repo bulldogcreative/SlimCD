@@ -13,6 +13,6 @@ class CloseBatchRequestTest extends TestCase
         $cbr->password = '289075';
         $cbr->siteid = 228226448;
         $result = $slimcd->closeBatch($cbr);
-        $this->assertInternalType('string', $result->response);
+        $this->assertIsString($result->response);
     }
 }

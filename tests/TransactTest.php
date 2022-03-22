@@ -15,14 +15,14 @@ class TransactTest extends TestCase
     {
         $testObject = new \SlimCD\Transact\CloseBatchRequest();
         $this->assertInstanceOf('\SlimCD\Transact\CloseBatchRequest', $testObject);
-        $this->assertInternalType('array', $testObject->jsonSerialize());
+        $this->assertIsArray($testObject->jsonSerialize());
     }
 
     public function testProcessTransactionRequest()
     {
         $testObject = new \SlimCD\Transact\ProcessTransactionRequest();
         $this->assertInstanceOf('\SlimCD\Transact\ProcessTransactionRequest', $testObject);
-        $this->assertInternalType('array', $testObject->jsonSerialize());
+        $this->assertIsArray($testObject->jsonSerialize());
     }
 
     public function testProcessRequest()
@@ -30,13 +30,13 @@ class TransactTest extends TestCase
         $request = new \SlimCD\Transact\ProcessTransactionRequest();
         $testObject = new \SlimCD\Transact\Transact();
         $result = $testObject->processTransaction($request);
-        $this->assertInternalType('string', $result->response);
+        $this->assertIsString($result->response);
 
         $testObject->debug = true;
         $result = $testObject->processTransaction($request, 200);
-        $this->assertInternalType('string', $result->response);
+        $this->assertIsString($result->response);
 
         $result = $testObject->processTransaction($request, 0);
-        $this->assertInternalType('string', $result->response);
+        $this->assertIsString($result->response);
     }
 }
